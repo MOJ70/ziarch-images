@@ -10,6 +10,8 @@ Material for any website (Framer now, a custom site later), built from **MoJ Por
   - `projects.json` — all texts: title, subtitle, year, location, studio, supervision, team, introduction, concept, outcome, captions for every image, cover and the 10 images used on the site.
   - `framer_projects.csv`, `framer_artworks_brass.csv` — ready for Framer CMS import.
   - `_scripts\` — `build.py` (rebuilds `web\` from the originals), `selection.json` (which source files are used, in order).
+  - `social\og-1200x630.jpg` — social share image (WormFinding model), used as Framer's Social preview.
+- Downloads (linked from the About page): `v2/downloads/Mojtaba-Mohammadi-Portfolio-2026.pdf` and `v2/downloads/Mojtaba-Mohammadi-CV-2026.pdf` (phone number removed). To update, replace the file at the same path in the repo; the site links stay the same.
 - Online (used by Framer): `https://raw.githubusercontent.com/MOJ70/ziarch-images/main/v2/<NN-name>/NN.jpg` (repo MOJ70/ziarch-images, folder `v2`).
 
 ## Replacing an image (e.g. an upscaled version)
