@@ -1,6 +1,6 @@
 # Zi Arch Studio — website kit v2 (portfolio 2026)
 
-Material for any website (Framer now, a custom site later), built from **MoJ Portfolio 2026 - Letter v2**.
+Material for any website (Framer now, a custom site later), built from **MoJ Portfolio 2026 - Letter v2**; project sheets, covers and process texts updated from **Letter v4** (Nov 2026).
 
 ## Where things are
 - On MoJ's computer: `ZI ARCH - Claude\04-Website Kit\`
@@ -14,10 +14,18 @@ Material for any website (Framer now, a custom site later), built from **MoJ Por
 - Downloads (linked from the About page): `v2/downloads/Mojtaba-Mohammadi-Portfolio-2026.pdf` and `v2/downloads/Mojtaba-Mohammadi-CV-2026.pdf` (phone number removed). To update, replace the file at the same path in the repo; the site links stay the same.
 - Online (used by Framer): `https://raw.githubusercontent.com/MOJ70/ziarch-images/main/v2/<NN-name>/NN.jpg` (repo MOJ70/ziarch-images, folder `v2`).
 
+## Update from portfolio v4 (Nov 2026)
+- Image 11–17 of each project = full portfolio sheets (diagrams, drawings, process) rendered from Letter v4 pages; the project page shows them after "The Process" text. Only filled slots are shown.
+- New CMS fields: `Process` (text) and `Featured` (Home shows the 4 featured: WormFinding, Saleria, Porta Verde, Topo Bridge).
+- New covers: Shelter (model centred), Performative Vessels (whole vessel), Endemic Architecture (cast block).
+- New project 15: Iran Expo Pavilion (Dubai, 2018), images from the old portfolio.
+- `bw/` holds grayscale hero/CTA versions (the site uses Framer's grayscale filter instead).
+- Downloads are switched off on the About page until the final PDFs are ready; the files above stay in the repo.
+
 ## Replacing an image (e.g. an upscaled version)
 1. Keep the slot number. Put the new file in `originals\` (any name starting with the slot, e.g. `03__new.jpg`) and save its web version as `web\03.jpg` (max 4000 px, JPG 90) — or ask Claude to rebuild it.
 2. Upload the new `web\03.jpg` to the same path in the GitHub repo; for Framer, re-import the CSV or replace the image in the CMS item.
 Because file names never change, a custom site that reads `projects.json` picks up the new image automatically.
 
 ## Projects (portfolio order)
-01 WormFinding · 02 LA Olympic Museum · 03 LA Train Station · 04 Saleria · 05 Shelter · 06 Performative Vessels · 07 Endemic Architecture · 08 Porta Verde · 09 Harvesting the Future · 10 Sustainable Multidisciplinary Design (Nodo Bovisa) · 11 Topo Bridge · 12 ESTA · 13 Digitalized Versatile Mold · 14 Active Bending Gridshell · 0X Artworks (brass)
+01 WormFinding · 02 LA Olympic Museum · 03 LA Train Station · 04 Saleria · 05 Shelter · 06 Performative Vessels · 07 Endemic Architecture · 08 Porta Verde · 09 Harvesting the Future · 10 Sustainable Multidisciplinary Design (Nodo Bovisa) · 11 Topo Bridge · 12 ESTA · 13 Digitalized Versatile Mold · 14 Active Bending Gridshell · 15 Iran Expo Pavilion · 0X Artworks (brass)
