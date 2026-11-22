@@ -1,0 +1,42 @@
+name: Deploy site to GitHub Pages
+on:
+  push:
+    branches: [gh-pages]
+  workflow_dispatch:
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+concurrency:
+  group: pages
+  cancel-in-progress: true
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Enable Pages if needed
+        id: pages
+        uses: actions/configure-pages@v5
+        with:
+          enablement: true
+      - name: Point Pages at the gh-pages branch with the custom domain
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh api -X PUT "repos/${{ github.repository }}/pages" \
+            --input - <<'JSON' && echo "Pages set to branch gh-pages + zistudio.art" || echo "Could not set source/cname via API (set 'Custom domain' in Settings > Pages)"
+          {"cname":"zistudio.art","source":{"branch":"gh-pages","path":"/"},"build_type":"legacy"}
+          JSON
+      - name: Upload site
+        uses: actions/upload-pages-artifact@v3
+        continue-on-error: true
+        with:
+          path: .
+      - name: Deploy
+        id: deployment
+        uses: actions/deploy-pages@v4
+        continue-on-error: true
