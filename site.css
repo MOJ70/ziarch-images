@@ -227,7 +227,11 @@ blockquote.pull cite { display: block; margin-top: 14px; font: 400 10px/1.6 var(
 /* about */
 .about-top { display: grid; grid-template-columns: 7fr 5fr; gap: 56px; align-items: start; }
 .about-top .col { display: grid; gap: 26px; min-width: 0; }
+.portrait { display: grid; gap: 12px; }
 .portrait img { width: 100%; filter: grayscale(1); }
+.overview-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; }
+.overview-grid .sec-text { max-width: none; }
+@media (max-width: 900px) { .overview-grid { grid-template-columns: 1fr; gap: 32px; } }
 .metrics { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 28px; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); padding: 34px 0; }
 .metrics .v { font: 500 clamp(44px, 5vw, 64px)/1 var(--font-display); font-variant-numeric: tabular-nums; }
 .metrics .l { font: 400 10px/1.5 var(--font-mono); letter-spacing: .24em; text-transform: uppercase; color: var(--fg-3); margin-top: 10px; }
